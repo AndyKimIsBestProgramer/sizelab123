@@ -22,100 +22,100 @@ if(isset($_POST['ID']) && isset($_POST['ID_CK']) && isset($_POST['password']) &&
 
     // 에러를 체크
     if(empty($ID)){//ID 대한 에러 체크    
-        header("location: member.php?error=아이디가 비어있습니다&$user_info");
+        header("location: member.html?error=아이디가 비어있습니다&$user_info");
         exit();
 
         // "<script>
         // alert('ID를 작성해주세요'&$user_info);
-        // location.replace('member.php');
+        // location.replace('member.html');
         // </script>";
     }
     else if(empty($ID_CK)){//ID_CK 대한 에러 체크
-        header("location: member.php?error=아이디 확인란이 비어있습니다&$user_info");
+        header("location: member.html?error=아이디 확인란이 비어있습니다&$user_info");
         exit();    
         // "<script>
         // alert('비밀번호를 작성해주세요'&$user_info);
-        // location.replace('member.php');
+        // location.replace('member.html');
         // </script>";
     }
     else if($ID !== $ID_CK){//아이디와 아이디 중복 확인이 동일한지 확인해 봄
-        header("location: member.php?error=아이디가 일치하지 않습니다&$user_info");
+        header("location: member.html?error=아이디가 일치하지 않습니다&$user_info");
         exit();        
     }
     else if(empty($password)){//password 대한 에러 체크
-        header("location: member.php?error=비밀번호가 비어있습니다&$user_info");
+        header("location: member.html?error=비밀번호가 비어있습니다&$user_info");
         exit();    
         // "<script>
         // alert('비밀번호를 작성해주세요'&$user_info);
-        // location.replace('member.php');
+        // location.replace('member.html');
         // </script>";
     }
     else if(empty($password_CK)){//password_CK 대한 에러 체크    
-        header("location: member.php?error=비밀번호 확인란이 비어있습니다&$user_info");
+        header("location: member.html?error=비밀번호 확인란이 비어있습니다&$user_info");
         exit();
         // "<script>
         // alert('비밀번호 확인란을 작성해주세요'&$user_info);
-        // location.replace('member.php');
+        // location.replace('member.html');
         // </script>";
     }
     else if($password !== $password_CK){//비밀번호와 비밀번호 중복 확인이 동일한지 확인해 봄
-        header("location: member.php?error=비밀번호가 일치하지 않습니다&$user_info");
+        header("location: member.html?error=비밀번호가 일치하지 않습니다&$user_info");
         exit();
         // "<script>
         // alert('비밀번호 확인란을 작성해주세요'&$user_info);
-        // location.replace('member.php');
+        // location.replace('member.html');
         // </script>";
     }
     else if(empty($nickname)){//nickname 대한 에러 체크    
-        header("location: member.php?error=닉네임이 비어있습니다&$user_info");
+        header("location: member.html?error=닉네임이 비어있습니다&$user_info");
         exit();    
         // "<script>
         // alert('닉네임을 작성해주세요'&$user_info);
-        // location.replace('member.php');
+        // location.replace('member.html');
         // </script>";
     }
     else if(empty($nickname_CK)){//nickname 대한 에러 체크        
-        header("location: member.php?error=닉네임 확인란이 비어있습니다&$user_info");
+        header("location: member.html?error=닉네임 확인란이 비어있습니다&$user_info");
         exit();
         // "<script>
         // alert('닉네임을 작성해주세요'&$user_info);
-        // location.replace('member.php');
+        // location.replace('member.html');
         // </script>";
     }
     else if($nickname !== $nickname_CK){//닉네임과 닉네임 중복 확인이 동일한지 확인해 봄   
-        header("location: member.php?error=닉네임이 일치하지 않습니다&$user_info");
+        header("location: member.html?error=닉네임이 일치하지 않습니다&$user_info");
         exit();     
         // "<script>
         // alert('닉네임이 일치하지 않습니다.'&$user_info);
-        // location.replace('member.php');
+        // location.replace('member.html');
         // </script>";
     }
     else if(empty($user_name)){//user_name 대한 에러 체크
-        header("location: member.php?error=이름이 비어있습니다&$user_info");
+        header("location: member.html?error=이름이 비어있습니다&$user_info");
         exit();         
         // "<script>
         // alert('이름을 작성해주세요.'&$user_info);
-        // location.replace('member.php');
+        // location.replace('member.html');
         // </script>";
     }
     else if(empty($user_email)){//user_email 대한 에러 체크     
-        header("location: member.php?error=이메일이 비어있습니다&$user_info");
+        header("location: member.html?error=이메일이 비어있습니다&$user_info");
         exit();   
         // "<script>
         // alert('이메일을 작성해주세요.'&$user_info);
-        // location.replace('member.php');
+        // location.replace('member.html');
         // </script>";
     }
     else if(empty($user_phone)){//user_phone 대한 에러 체크 
-        header("location: member.php?error=전화번호가 비어있습니다.&$user_info");
+        header("location: member.html?error=전화번호가 비어있습니다.&$user_info");
         exit();     
         // "<script>
         // alert('전화번호를 작성해주세요.'&$user_info);
-        // location.replace('member.php');
+        // location.replace('member.html');
         // </script>";
     }
     else if(empty($gender)){//gender 대한 에러 체크 
-        header("location: member.php?error=성별이 비어있습니다.&$user_info");
+        header("location: member.html?error=성별이 비어있습니다.&$user_info");
         exit();             
     }
     else{
@@ -132,27 +132,27 @@ if(isset($_POST['ID']) && isset($_POST['ID_CK']) && isset($_POST['password']) &&
         $order_nickname = mysqli_query($db, $sql_same_nickname); // nickname에 대한 명령
 
         if(mysqli_num_rows($order_ID) > 0 && mysqli_num_rows($order_nickname) > 0){ //만약 아이디와 닉네임이 이미 존재한다면~
-            header("location: member.php?error=아이디와 닉네임이 이미 존재합니다.&$user_info");      
+            header("location: member.html?error=아이디와 닉네임이 이미 존재합니다.&$user_info");      
             exit();      
             // "<script>
             // alert('아이디가 이미 존재합니다.'&$user_info);
-            // location.replace('member.php');
+            // location.replace('member.html');
             // </script>";
         }
         else if(mysqli_num_rows($order_ID) > 0 && mysqli_num_rows($order_nickname) == 0){ //만약 아이디만 이미 존재한다면~
-            header("location: member.php?error=아이디가 이미 존재합니다.&$user_info");      
+            header("location: member.html?error=아이디가 이미 존재합니다.&$user_info");      
             exit();      
             // "<script>
             // alert('아이디가 이미 존재합니다.'&$user_info);
-            // location.replace('member.php');
+            // location.replace('member.html');
             // </script>";
         }
         else if(mysqli_num_rows($order_ID) == 0 && mysqli_num_rows($order_nickname) > 0){ //만약 닉네임만 이미 존재한다면~
-            header("location: member.php?error=닉네임이 이미 존재합니다.&$user_info");  
+            header("location: member.html?error=닉네임이 이미 존재합니다.&$user_info");  
             exit();
             // "<script>
             // alert('닉네임이 이미 존재합니다.'&$user_info);
-            // location.replace('member.php');
+            // location.replace('member.html');
             // </script>";
         }
         else{//중복이 없다면 insert into를 시행~
@@ -164,19 +164,19 @@ if(isset($_POST['ID']) && isset($_POST['ID_CK']) && isset($_POST['password']) &&
             $result = mysqli_query($db, $sql_save);
 
             if($result){//가입이 성공적이라면 
-                header("location: member.php?success=성공적으로 가입 되었습니다.");
+                header("location: member.html?success=성공적으로 가입 되었습니다.");
                 exit();       
                 // "<script>
                 // alert('성공적으로 가입 되었습니다.'&$user_info);
-                // location.replace('member.php');
+                // location.replace('member.html');
                 // </script>";
             }
             else{//어떤한 이유에서든지 성공적으로 저장되지 않는다면
-                header("location: member.php?error=가입에 실패하였습니다.");
+                header("location: member.html?error=가입에 실패하였습니다.");
                 exit();               
                 // "<script>
                 // alert('가입에 실패하였습니다.'&$user_info);
-                // location.replace('member.php');
+                // location.replace('member.html');
                 // </script>";
             }
         }       
@@ -185,11 +185,11 @@ if(isset($_POST['ID']) && isset($_POST['ID_CK']) && isset($_POST['password']) &&
 
 else{
     // 에러 메시지
-    header("location: member.php?error=알 수 없는 오류가 발생하였습니다.&$user_info");
+    header("location: member.html?error=알 수 없는 오류가 발생하였습니다.&$user_info");
     exit();   
     // "<script>
     // alert('알 수 없는 오류가 발생하였습니다.');
-    // location.replace('member.php');
+    // location.replace('member.html');
     // </script>";
 }
 
